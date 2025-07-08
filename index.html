@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalAI Pro - AI Legal Document Generator | Create Legal Documents in 60 Seconds</title>
+    <meta name="description" content="Generate professional legal documents instantly with AI. GDPR compliant, lawyer-approved templates. No legal expertise required.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glassmorphism-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="LegalAI Pro" height="40">
+                <span class="brand-text">LegalAI Pro</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu glassmorphism-dropdown">
+                            <li><a class="dropdown-item" href="document-generator.html"><i class="fas fa-file-contract"></i> Document Generator</a></li>
+                            <li><a class="dropdown-item" href="templates.html"><i class="fas fa-file-alt"></i> Legal Templates</a></li>
+                            <li><a class="dropdown-item" href="ai-assistant.html"><i class="fas fa-robot"></i> AI Legal Assistant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu glassmorphism-dropdown">
+                            <li><a class="dropdown-item" href="business.html"><i class="fas fa-building"></i> For Business</a></li>
+                            <li><a class="dropdown-item" href="individuals.html"><i class="fas fa-user"></i> For Individuals</a></li>
+                            <li><a class="dropdown-item" href="law-firms.html"><i class="fas fa-balance-scale"></i> For Law Firms</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-nav">
+                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="btn btn-primary cta-button" href="signup.html">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="animated-background"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="compliance-badges mb-4">
+                            <div class="badge-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>GDPR</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fas fa-lock"></i>
+                                <span>CCPA</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>SOC 2</span>
+                            </div>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Generate Legal Documents with 
+                            <span class="gradient-text">AI Power</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            Create professional legal documents in seconds, not hours. 
+                            Our AI-powered platform generates lawyer-approved documents 
+                            tailored to your specific needs.
+                        </p>
+                        
+                        <div class="hero-cta">
+                            <a href="document-generator.html" class="btn btn-primary btn-lg cta-glow">
+                                <i class="fas fa-magic"></i>
+                                Get legal docs in 60 seconds—no lawyer needed
+                            </a>
+                            <a href="#demo" class="btn btn-outline-light btn-lg ghost-button">
+                                <i class="fas fa-play"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Documents Generated</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">99.9%</div>
+                                <div class="stat-label">Accuracy Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">AI Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="document-preview-container">
+                            <div class="document-preview neumorphism">
+                                <div class="document-header">
+                                    <div class="doc-icon">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <div class="doc-info">
+                                        <h4>Non-Disclosure Agreement</h4>
+                                        <p>Generated in 45 seconds</p>
+                                    </div>
+                                    <div class="doc-status">
+                                        <span class="status-badge success">Ready</span>
+                                    </div>
+                                </div>
+                                <div class="document-content">
+                                    <div class="content-line"></div>
+                                    <div class="content-line short"></div>
+                                    <div class="content-line"></div>
+                                    <div class="content-line medium"></div>
+                                    <div class="content-line"></div>
+                                    <div class="content-line short"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="floating-elements">
+                                <div class="floating-icon" data-icon="shield">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="floating-icon" data-icon="check">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="floating-icon" data-icon="clock">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Why Choose LegalAI Pro?</h2>
+                    <p class="section-subtitle">
+                        Experience the future of legal document creation with our cutting-edge AI technology
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-item large neumorphism">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI-Powered Generation</h3>
+                        <p>Our advanced AI understands legal language and generates documents that are both accurate and compliant with current laws.</p>
+                        <div class="feature-visual">
+                            <div class="ai-animation">
+                                <div class="neural-network">
+                                    <div class="node"></div>
+                                    <div class="node"></div>
+                                    <div class="node"></div>
+                                    <div class="connection"></div>
+                                    <div class="connection"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bento-item medium neumorphism">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>60-Second Generation</h3>
+                        <p>From input to final document in under a minute. No more waiting days for legal paperwork.</p>
+                    </div>
+                </div>
+                
+                <div class="bento-item medium neumorphism">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>100% Compliant</h3>
+                        <p>All documents are GDPR, CCPA, and industry-standard compliant with regular updates.</p>
+                    </div>
+                </div>
+                
+                <div class="bento-item small neumorphism">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>Easy Editing</h3>
+                        <p>Intuitive editor with real-time collaboration.</p>
+                    </div>
+                </div>
+                
+                <div class="bento-item small neumorphism">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>Multiple Formats</h3>
+                        <p>Export as PDF, Word, or HTML instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Types Section -->
+    <section class="document-types-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Legal Documents We Generate</h2>
+                    <p class="section-subtitle">
+                        Comprehensive coverage for all your legal document needs
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="document-card neumorphism">
+                        <div class="document-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Contracts & Agreements</h4>
+                        <ul>
+                            <li>Service Agreements</li>
+                            <li>Employment Contracts</li>
+                            <li>Non-Disclosure Agreements</li>
+                            <li>Partnership Agreements</li>
+                        </ul>
+                        <a href="templates.html" class="btn btn-outline-primary">View Templates</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="document-card neumorphism">
+                        <div class="document-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Business Documents</h4>
+                        <ul>
+                            <li>Terms of Service</li>
+                            <li>Privacy Policies</li>
+                            <li>Operating Agreements</li>
+                            <li>Shareholder Agreements</li>
+                        </ul>
+                        <a href="templates.html" class="btn btn-outline-primary">View Templates</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="document-card neumorphism">
+                        <div class="document-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>Personal Legal</h4>
+                        <ul>
+                            <li>Wills & Testaments</li>
+                            <li>Power of Attorney</li>
+                            <li>Rental Agreements</li>
+                            <li>Divorce Papers</li>
+                        </ul>
+                        <a href="templates.html" class="btn btn-outline-primary">View Templates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Trusted by Leading Companies</h2>
+                </div>
+            </div>
+            
+            <div class="logo-carousel">
+                <div class="logo-track">
+                    <div class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" alt="TechCorp">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" alt="StartupXYZ">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" alt="InnovateLab">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" alt="FutureTech">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" alt="NextGen">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">What Our Users Say</h2>
+                    <p class="section-subtitle">
+                        Join thousands of satisfied customers who trust LegalAI Pro
+                    </p>
+                </div>
+            </div>
+            
+            <div class="testimonial-carousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-card neumorphism">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"LegalAI Pro saved us thousands in legal fees. The documents are professional and legally sound."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="John Smith">
+                                <div class="author-info">
+                                    <h5>John Smith</h5>
+                                    <span>CEO, TechStartup Inc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card neumorphism">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"The AI understands context perfectly. Generated our entire contract suite in minutes."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b9e0d3d3?w=60&h=60&fit=crop&crop=face" alt="Sarah Johnson">
+                                <div class="author-info">
+                                    <h5>Sarah Johnson</h5>
+                                    <span>Legal Director, InnovateCorp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card neumorphism">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"User-friendly interface and lightning-fast generation. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Mike Davis">
+                                <div class="author-info">
+                                    <h5>Mike Davis</h5>
+                                    <span>Founder, StartupHub</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="cta-content neumorphism">
+                        <h2>Ready to Transform Your Legal Workflow?</h2>
+                        <p>Join thousands of businesses already using LegalAI Pro to streamline their legal processes.</p>
+                        <div class="cta-buttons">
+                            <a href="signup.html" class="btn btn-primary btn-lg cta-glow">
+                                Start Free Trial
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg ghost-button">
+                                Schedule Demo
+                            </a>
+                        </div>
+                        <div class="cta-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>14-day free trial</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>No credit card required</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Cancel anytime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glassmorphism-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="assets/images/logo.png" alt="LegalAI Pro" height="40">
+                        <span class="brand-text">LegalAI Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionizing legal document creation with AI-powered technology. 
+                        Fast, accurate, and compliant legal documents for everyone.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Product</h5>
+                    <ul class="footer-links">
+                        <li><a href="document-generator.html">Document Generator</a></li>
+                        <li><a href="templates.html">Templates</a></li>
+                        <li><a href="ai-assistant.html">AI Assistant</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="business.html">For Business</a></li>
+                        <li><a href="individuals.html">For Individuals</a></li>
+                        <li><a href="law-firms.html">For Law Firms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="compliance.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">
+                        © 2024 LegalAI Pro. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-badges">
+                        <span class="badge-item">
+                            <i class="fas fa-shield-alt"></i>
+                            GDPR Compliant
+                        </span>
+                        <span class="badge-item">
+                            <i class="fas fa-lock"></i>
+                            SOC 2 Certified
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

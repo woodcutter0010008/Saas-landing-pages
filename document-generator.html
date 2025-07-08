@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Generator - Create Legal Documents in 60 Seconds | LegalAI Pro</title>
+    <meta name="description" content="Generate professional legal documents instantly with our AI-powered wizard. Step-by-step guidance, lawyer-approved templates, GDPR compliant.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/wizard.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glassmorphism-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="LegalAI Pro" height="40">
+                <span class="brand-text">LegalAI Pro</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu glassmorphism-dropdown">
+                            <li><a class="dropdown-item active" href="document-generator.html"><i class="fas fa-file-contract"></i> Document Generator</a></li>
+                            <li><a class="dropdown-item" href="templates.html"><i class="fas fa-file-alt"></i> Legal Templates</a></li>
+                            <li><a class="dropdown-item" href="ai-assistant.html"><i class="fas fa-robot"></i> AI Legal Assistant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu glassmorphism-dropdown">
+                            <li><a class="dropdown-item" href="business.html"><i class="fas fa-building"></i> For Business</a></li>
+                            <li><a class="dropdown-item" href="individuals.html"><i class="fas fa-user"></i> For Individuals</a></li>
+                            <li><a class="dropdown-item" href="law-firms.html"><i class="fas fa-balance-scale"></i> For Law Firms</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-nav">
+                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="btn btn-primary cta-button" href="signup.html">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="wizard-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">AI Legal Document Generator</h1>
+                    <p class="hero-subtitle">
+                        Create professional legal documents in minutes with our intelligent wizard. 
+                        Just answer a few questions and let AI do the rest.
+                    </p>
+                    
+                    <div class="wizard-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">60s</div>
+                                <div class="stat-label">Average Generation Time</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Legal Compliance</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Documents Created</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Wizard -->
+    <section class="wizard-section">
+        <div class="container">
+            <div class="wizard-container neumorphism">
+                <!-- Progress Bar -->
+                <div class="wizard-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Document Type</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Basic Info</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Details</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-label">Review</div>
+                        </div>
+                        <div class="step" data-step="5">
+                            <div class="step-number">5</div>
+                            <div class="step-label">Generate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wizard Content -->
+                <div class="wizard-content">
+                    <!-- Step 1: Document Type Selection -->
+                    <div class="wizard-step active" id="step1">
+                        <div class="step-header">
+                            <h2>Choose Document Type</h2>
+                            <p>Select the type of legal document you want to create</p>
+                        </div>
+                        
+                        <div class="document-types-grid">
+                            <div class="document-type-card" data-type="nda">
+                                <div class="card-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3>Non-Disclosure Agreement</h3>
+                                <p>Protect confidential information in business relationships</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">Most Popular</span>
+                                    <span class="time-tag">~45 seconds</span>
+                                </div>
+                            </div>
+                            
+                            <div class="document-type-card" data-type="contract">
+                                <div class="card-icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <h3>Service Agreement</h3>
+                                <p>Define terms for service-based business relationships</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">Business</span>
+                                    <span class="time-tag">~60 seconds</span>
+                                </div>
+                            </div>
+                            
+                            <div class="document-type-card" data-type="employment">
+                                <div class="card-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h3>Employment Contract</h3>
+                                <p>Establish clear employment terms and conditions</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">HR</span>
+                                    <span class="time-tag">~75 seconds</span>
+                                </div>
+                            </div>
+                            
+                            <div class="document-type-card" data-type="privacy">
+                                <div class="card-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>Privacy Policy</h3>
+                                <p>GDPR compliant privacy policy for your website</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">GDPR</span>
+                                    <span class="time-tag">~90 seconds</span>
+                                </div>
+                            </div>
+                            
+                            <div class="document-type-card" data-type="terms">
+                                <div class="card-icon">
+                                    <i class="fas fa-scroll"></i>
+                                </div>
+                                <h3>Terms of Service</h3>
+                                <p>Legal terms for your website or application</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">Web</span>
+                                    <span class="time-tag">~80 seconds</span>
+                                </div>
+                            </div>
+                            
+                            <div class="document-type-card" data-type="will">
+                                <div class="card-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>Last Will & Testament</h3>
+                                <p>Secure your legacy with a legally binding will</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">Personal</span>
+                                    <span class="time-tag">~120 seconds</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Basic Information -->
+                    <div class="wizard-step" id="step2">
+                        <div class="step-header">
+                            <h2>Basic Information</h2>
+                            <p>Provide essential details for your document</p>
+                        </div>
+                        
+                        <div class="form-container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="companyName">Company/Organization Name</label>
+                                        <input type="text" id="companyName" class="form-control neumorphism-input" placeholder="Enter company name">
+                                        <div class="input-help">
+                                            <i class="fas fa-info-circle"></i>
+                                            This will appear as the primary party in the document
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactPerson">Contact Person</label>
+                                        <input type="text" id="contactPerson" class="form-control neumorphism-input" placeholder="Full name">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" class="form-control neumorphism-input" placeholder="contact@company.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" class="form-control neumorphism-input" placeholder="+1 (555) 123-4567">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Business Address</label>
+                                <textarea id="address" class="form-control neumorphism-input" rows="3" placeholder="Enter complete business address"></textarea>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="jurisdiction">Jurisdiction</label>
+                                        <select id="jurisdiction" class="form-control neumorphism-input">
+                                            <option value="">Select jurisdiction</option>
+                                            <option value="us">United States</option>
+                                            <option value="uk">United Kingdom</option>
+                                            <option value="ca">Canada</option>
+                                            <option value="au">Australia</option>
+                                            <option value="eu">European Union</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="industry">Industry</label>
+                                        <select id="industry" class="form-control neumorphism-input">
+                                            <option value="">Select industry</option>
+                                            <option value="tech">Technology</option>
+                                            <option value="finance">Finance</option>
+                                            <option value="healthcare">Healthcare</option>
+                                            <option value="retail">Retail</option>
+                                            <option value="consulting">Consulting</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Document Details -->
+                    <div class="wizard-step" id="step3">
+                        <div class="step-header">
+                            <h2>Document Details</h2>
+                            <p>Customize specific terms and conditions</p>
+                        </div>
+                        
+                        <div class="details-container" id="detailsContainer">
+                            <!-- Dynamic content based on document type -->
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review -->
+                    <div class="wizard-step" id="step4">
+                        <div class="step-header">
+                            <h2>Review Your Information</h2>
+                            <p>Please verify all details before generating your document</p>
+                        </div>
+                        
+                        <div class="review-container">
+                            <div class="review-section">
+                                <h3><i class="fas fa-building"></i> Company Information</h3>
+                                <div class="review-grid">
+                                    <div class="review-item">
+                                        <label>Company Name:</label>
+                                        <span id="reviewCompanyName">-</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <label>Contact Person:</label>
+                                        <span id="reviewContactPerson">-</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <label>Email:</label>
+                                        <span id="reviewEmail">-</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <label>Phone:</label>
+                                        <span id="reviewPhone">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-section">
+                                <h3><i class="fas fa-file-alt"></i> Document Details</h3>
+                                <div id="reviewDetails">
+                                    <!-- Dynamic review content -->
+                                </div>
+                            </div>
+                            
+                            <div class="review-section">
+                                <h3><i class="fas fa-shield-alt"></i> Legal Compliance</h3>
+                                <div class="compliance-checks">
+                                    <div class="compliance-item">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                        <span>GDPR Compliant</span>
+                                    </div>
+                                    <div class="compliance-item">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                        <span>Industry Standards Met</span>
+                                    </div>
+                                    <div class="compliance-item">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                        <span>Jurisdiction Requirements</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Generate Document -->
+                    <div class="wizard-step" id="step5">
+                        <div class="step-header">
+                            <h2>Generating Your Document</h2>
+                            <p>Our AI is creating your professional legal document</p>
+                        </div>
+                        
+                        <div class="generation-container">
+                            <div class="generation-status" id="generationStatus">
+                                <div class="status-icon">
+                                    <div class="loading-spinner"></div>
+                                </div>
+                                <div class="status-text">
+                                    <h3>Processing...</h3>
+                                    <p id="statusMessage">Analyzing your requirements...</p>
+                                </div>
+                                <div class="status-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="generationProgress"></div>
+                                    </div>
+                                    <span class="progress-text" id="progressText">0%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="generation-complete" id="generationComplete" style="display: none;">
+                                <div class="success-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Document Generated Successfully!</h3>
+                                <p>Your legal document is ready for download and use.</p>
+                                
+                                <div class="document-actions">
+                                    <button class="btn btn-primary btn-lg" id="downloadBtn">
+                                        <i class="fas fa-download"></i>
+                                        Download PDF
+                                    </button>
+                                    <button class="btn btn-outline-primary btn-lg" id="previewBtn">
+                                        <i class="fas fa-eye"></i>
+                                        Preview Document
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-lg" id="editBtn">
+                                        <i class="fas fa-edit"></i>
+                                        Edit Document
+                                    </button>
+                                </div>
+                                
+                                <div class="document-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>PDF Format</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Legally Binding</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Generated in 47s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wizard Navigation -->
+                <div class="wizard-navigation">
+                    <button class="btn btn-outline-secondary" id="prevBtn" style="display: none;">
+                        <i class="fas fa-arrow-left"></i>
+                        Previous
+                    </button>
+                    <button class="btn btn-primary" id="nextBtn">
+                        Next
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Preview Modal -->
+    <div class="modal fade" id="previewModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content neumorphism">
+                <div class="modal-header">
+                    <h5 class="modal-title">Document Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="document-preview-container">
+                        <div class="document-preview-header">
+                            <div class="preview-controls">
+                                <button class="btn btn-sm btn-outline-primary" id="zoomOut">
+                                    <i class="fas fa-search-minus"></i>
+                                </button>
+                                <span class="zoom-level">100%</span>
+                                <button class="btn btn-sm btn-outline-primary" id="zoomIn">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="document-preview-content" id="documentPreview">
+                            <!-- Document content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="downloadFromPreview">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer glassmorphism-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="assets/images/logo.png" alt="LegalAI Pro" height="40">
+                        <span class="brand-text">LegalAI Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionizing legal document creation with AI-powered technology. 
+                        Fast, accurate, and compliant legal documents for everyone.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Product</h5>
+                    <ul class="footer-links">
+                        <li><a href="document-generator.html">Document Generator</a></li>
+                        <li><a href="templates.html">Templates</a></li>
+                        <li><a href="ai-assistant.html">AI Assistant</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="business.html">For Business</a></li>
+                        <li><a href="individuals.html">For Individuals</a></li>
+                        <li><a href="law-firms.html">For Law Firms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="compliance.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">
+                        © 2024 LegalAI Pro. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-badges">
+                        <span class="badge-item">
+                            <i class="fas fa-shield-alt"></i>
+                            GDPR Compliant
+                        </span>
+                        <span class="badge-item">
+                            <i class="fas fa-lock"></i>
+                            SOC 2 Certified
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/wizard.js"></script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Affordable AI Legal Document Generation | LegalAI Pro</title>
+    <meta name="description" content="Choose the perfect plan for your legal document needs. From individual users to enterprise solutions. Start free, upgrade anytime.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glassmorphism-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="LegalAI Pro" height="40">
+                <span class="brand-text">LegalAI Pro</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu glassmorphism-dropdown">
+                            <li><a class="dropdown-item" href="document-generator.html"><i class="fas fa-file-contract"></i> Document Generator</a></li>
+                            <li><a class="dropdown-item" href="templates.html"><i class="fas fa-file-alt"></i> Legal Templates</a></li>
+                            <li><a class="dropdown-item" href="ai-assistant.html"><i class="fas fa-robot"></i> AI Legal Assistant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu glassmorphism-dropdown">
+                            <li><a class="dropdown-item" href="business.html"><i class="fas fa-building"></i> For Business</a></li>
+                            <li><a class="dropdown-item" href="individuals.html"><i class="fas fa-user"></i> For Individuals</a></li>
+                            <li><a class="dropdown-item" href="law-firms.html"><i class="fas fa-balance-scale"></i> For Law Firms</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-nav">
+                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="btn btn-primary cta-button" href="signup.html">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="animated-background"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Simple, Transparent Pricing</h1>
+                    <p class="hero-subtitle">
+                        Choose the perfect plan for your legal document needs. 
+                        Start free, upgrade anytime, cancel whenever you want.
+                    </p>
+                    
+                    <!-- Billing Toggle -->
+                    <div class="billing-toggle">
+                        <span class="toggle-label">Monthly</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="billingToggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="toggle-label">
+                            Annual 
+                            <span class="discount-badge">Save 20%</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Free Plan -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card neumorphism">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>Starter</h3>
+                            <p>Perfect for individuals getting started</p>
+                        </div>
+                        
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="0" data-annual="0">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>3 documents per month</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Basic document types</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>PDF download</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Email support</span>
+                            </div>
+                            <div class="feature-item disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Advanced templates</span>
+                            </div>
+                            <div class="feature-item disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Priority support</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-cta">
+                            <a href="signup.html" class="btn btn-outline-primary btn-lg w-100">
+                                Get Started Free
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card neumorphism popular">
+                        <div class="popular-badge">
+                            <i class="fas fa-star"></i>
+                            Most Popular
+                        </div>
+                        
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Professional</h3>
+                            <p>Ideal for small businesses and professionals</p>
+                        </div>
+                        
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="29" data-annual="23">29</span>
+                            <span class="period">/month</span>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>50 documents per month</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>All document types</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Advanced templates</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Multiple export formats</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Priority support</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Document collaboration</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-cta">
+                            <a href="signup.html" class="btn btn-primary btn-lg w-100 cta-glow">
+                                Start Free Trial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card neumorphism">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Enterprise</h3>
+                            <p>For large organizations with custom needs</p>
+                        </div>
+                        
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="99" data-annual="79">99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Unlimited documents</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Custom templates</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>API access</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>White-label solution</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Dedicated support</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Advanced analytics</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-cta">
+                            <a href="contact.html" class="btn btn-outline-primary btn-lg w-100">
+                                Contact Sales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison -->
+    <section class="comparison-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Compare All Features</h2>
+                    <p class="section-subtitle">
+                        See what's included in each plan to make the best choice for your needs
+                    </p>
+                </div>
+            </div>
+            
+            <div class="comparison-table-container">
+                <div class="comparison-table neumorphism">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Features</th>
+                                <th>Starter</th>
+                                <th>Professional</th>
+                                <th>Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Documents per month</strong></td>
+                                <td>3</td>
+                                <td>50</td>
+                                <td>Unlimited</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Document types</strong></td>
+                                <td>Basic (5 types)</td>
+                                <td>All (20+ types)</td>
+                                <td>All + Custom</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Export formats</strong></td>
+                                <td>PDF only</td>
+                                <td>PDF, Word, HTML</td>
+                                <td>All formats</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Templates</strong></td>
+                                <td>Standard</td>
+                                <td>Advanced</td>
+                                <td>Custom</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Collaboration</strong></td>
+                                <td><i class="fas fa-times text-danger"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>API Access</strong></td>
+                                <td><i class="fas fa-times text-danger"></i></td>
+                                <td><i class="fas fa-times text-danger"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>White-label</strong></td>
+                                <td><i class="fas fa-times text-danger"></i></td>
+                                <td><i class="fas fa-times text-danger"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Support</strong></td>
+                                <td>Email</td>
+                                <td>Priority</td>
+                                <td>Dedicated</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <p class="section-subtitle">
+                            Got questions? We've got answers.
+                        </p>
+                    </div>
+                    
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item neumorphism mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Can I change my plan anytime?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! You can upgrade, downgrade, or cancel your plan at any time. Changes take effect immediately, and we'll prorate any charges accordingly.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item neumorphism mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Are the generated documents legally binding?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, all documents generated by LegalAI Pro are legally binding when properly executed. Our templates are created by legal experts and regularly updated to ensure compliance with current laws.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item neumorphism mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What happens if I exceed my document limit?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    If you reach your monthly document limit, you can either upgrade your plan or purchase additional documents at $5 each. We'll notify you when you're approaching your limit.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item neumorphism mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Do you offer refunds?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer a 30-day money-back guarantee for all paid plans. If you're not satisfied with our service, contact us within 30 days for a full refund.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item neumorphism mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Is my data secure?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely. We use enterprise-grade encryption, are SOC 2 certified, and comply with GDPR and CCPA regulations. Your data is never shared with third parties and is stored securely.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="cta-content neumorphism">
+                        <h2>Ready to Get Started?</h2>
+                        <p>Join thousands of businesses already using LegalAI Pro to streamline their legal processes.</p>
+                        <div class="cta-buttons">
+                            <a href="signup.html" class="btn btn-primary btn-lg cta-glow">
+                                Start Free Trial
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg ghost-button">
+                                Contact Sales
+                            </a>
+                        </div>
+                        <div class="cta-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>14-day free trial</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>No credit card required</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Cancel anytime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glassmorphism-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="assets/images/logo.png" alt="LegalAI Pro" height="40">
+                        <span class="brand-text">LegalAI Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionizing legal document creation with AI-powered technology. 
+                        Fast, accurate, and compliant legal documents for everyone.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Product</h5>
+                    <ul class="footer-links">
+                        <li><a href="document-generator.html">Document Generator</a></li>
+                        <li><a href="templates.html">Templates</a></li>
+                        <li><a href="ai-assistant.html">AI Assistant</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="business.html">For Business</a></li>
+                        <li><a href="individuals.html">For Individuals</a></li>
+                        <li><a href="law-firms.html">For Law Firms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="compliance.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">
+                        © 2024 LegalAI Pro. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-badges">
+                        <span class="badge-item">
+                            <i class="fas fa-shield-alt"></i>
+                            GDPR Compliant
+                        </span>
+                        <span class="badge-item">
+                            <i class="fas fa-lock"></i>
+                            SOC 2 Certified
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/pricing.js"></script>
+</body>
+</html>
